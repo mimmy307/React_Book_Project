@@ -1,3 +1,7 @@
+import BestSeller from "../components/BestSeller"
+import Genre from "../components/Genre"
+import RecommendationGenerator from "../components/RecommendationGenerator"
+
 function HomePage(){
 
     return(
@@ -8,8 +12,11 @@ function HomePage(){
                 <p>Slogan</p>
                 <p>short description</p>
             </div>
+            <BestSeller />
+            <Genre />
+            <RecommendationGenerator />
 
-            
+
         </div>
     )
 
