@@ -1,5 +1,5 @@
 import BestSeller from "../components/BestSeller"
-import Genre from "../components/Genre"
+import GenreCard from "../components/GenreCard"
 import RecommendationGenerator from "../components/RecommendationGenerator"
 
 function HomePage(){
@@ -13,7 +13,7 @@ function HomePage(){
                 <p>short description</p>
             </div>
             <BestSeller />
-            <Genre />
+            <GenreCard />
             <RecommendationGenerator />
 
 
