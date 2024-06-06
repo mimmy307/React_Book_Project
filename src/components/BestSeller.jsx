@@ -23,10 +23,11 @@ function BestSeller(){
             {books.map((book) =>{
                 if (book.bestSeller){
                     return (
-                    <div key= {book.bookId}>
+                    <div key= {book.id}>
                         <img src={book.bookImage} alt={book.bookTitle}/>
                     </div>
                     )}
+
                  })}
 
         </div>

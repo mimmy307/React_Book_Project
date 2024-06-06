@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom"
+
 function Navbar(){
     return(
         <div className="Navbar">
         <img src="" alt="logo"/>
         <div>
-            <p>Home</p>
+            <Link to="/"><p>Home</p></Link>
             <p>Books</p>
             <p>About Us</p>
         </div>
