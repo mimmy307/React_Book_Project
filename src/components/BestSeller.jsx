@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function BestSeller(){
     const [books, setBooks] = useState([])
@@ -24,7 +25,9 @@ function BestSeller(){
                 if (book.bestSeller){
                     return (
                     <div key= {book.id}>
-                        <img src={book.bookImage} alt={book.bookTitle}/>
+                        <Link to={`/book/${book.id}`}>
+                            <img src={book.bookImage} alt={book.bookTitle}/>
+                        </Link>
                     </div>
                     )}
 

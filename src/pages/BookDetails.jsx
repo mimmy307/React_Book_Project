@@ -1,20 +1,22 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import AddReviewForm from "../components/AddReviewForm";
 
 function BookDetails(){
     const {booksId} = useParams();
     const [oneBook, setOneBook] = useState({})
 
-    useEffect(() =>{
-        const fetchBookDetail = async () =>{
-            try{
-                const response = await axios.get(`http://localhost:5005/books/${booksId}`)
-                setOneBook(response.data)
-            } catch(err){
-                console.log("book details error", err)
-            }
+    const fetchBookDetail = async () =>{
+        try{
+            const response = await axios.get(`http://localhost:5005/books/${booksId}`)
+            setOneBook(response.data)
+        } catch(err){
+            console.log("book details error", err)
         }
+    }
+
+    useEffect(() =>{
         fetchBookDetail();
     }, [booksId])
 
@@ -38,16 +40,17 @@ function BookDetails(){
                     </div>
                 </div>
             </div>
+
             <div>
                 <h2>Book Reviews</h2>
-                {/* {oneBook.reviews && (oneBook.reviews.map((review, index) => (
+                {oneBook.reviews && (oneBook.reviews.map((review, index) => (
                     <div key={index}>
                         <p>{review.fullname}</p>
                         <p>{review.text}</p>
+                    </div>
+                )))}
 
-                        add review button here with form
-                    </div> */}
-      
+                <AddReviewForm  onReload={fetchBookDetail}/>
             
             </div>
         </div>

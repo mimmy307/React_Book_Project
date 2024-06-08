@@ -1,18 +1,17 @@
 import { useState, useEffect} from "react"
 import axios from "axios"
 import { useParams, Link } from "react-router-dom"
+import GenreSidebar from "../components/GenreSidebar"
 
 function Genre(){
     const [books, setBooks] = useState([])
     const {genre} = useParams()
 
-    console.log(genre)
 
     useEffect(() => {
         const fetchData = async() =>{
             try{
                 const response = await axios.get(`http://localhost:5005/books?genre=${genre}`);
-                /* console.log(response) */
                 setBooks(response.data);
             }catch(err){
                 console.log("genre", err)
@@ -21,14 +20,15 @@ function Genre(){
 
         fetchData();
     },[genre])
- console.log("book", books)
+ 
     return(
         <div>
+        <GenreSidebar />
         <h2 style={{color:"red"}}>{genre}</h2>
             {books.map((book) =>{
                     return (
-                    <div key= {book.bookId}>
-                        <Link to={`/book/${book.bookId}`}>
+                    <div key= {book.id}>
+                        <Link to={`/book/${book.id}`}>
                         <img src={book.bookImage} alt={book.bookTitle}/>
                         <p>{book.bookTitle}</p>
                         </Link>
