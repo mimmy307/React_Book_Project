@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AddReviewForm from "../components/AddReviewForm";
 
-function BookDetails(){
+function BookDetails({addToReadingList}){
     const {booksId} = useParams();
     const [oneBook, setOneBook] = useState({})
+    
 
     const fetchBookDetail = async () =>{
         try{
@@ -19,6 +20,10 @@ function BookDetails(){
     useEffect(() =>{
         fetchBookDetail();
     }, [booksId])
+
+    const HandleAddToReadingList = () =>{
+       addToReadingList(oneBook)
+    }
 
     
     return(
@@ -35,7 +40,7 @@ function BookDetails(){
                         <button>{oneBook.mood}</button>
                     </span>
                     <div>
-                    {/* Add to readding list */}
+                        <button onClick={HandleAddToReadingList}>Add to reading list</button>
                     {/* buy book */}
                     </div>
                 </div>

@@ -9,7 +9,7 @@ function Navbar(){
             <p>Books</p>
             <p>About Us</p>
         </div>
-        <button> My profile</button>
+        <Link to="/profile"><button> My profile</button></Link> 
 
         </div>
     )
