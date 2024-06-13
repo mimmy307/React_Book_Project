@@ -1,11 +1,14 @@
+import MyBooks from "../components/MyBooks"
 import ReadingList from "../components/ReadingList"
 
 
-function Profile ({readingList}){
+function Profile ({readingList, myBooks}){
 
     return(
-
-       <ReadingList  readingList={readingList}/> 
+        <div>
+            <ReadingList  readingList={readingList}/> 
+            <MyBooks myBooks ={myBooks} />
+       </div>
     )
 }
 

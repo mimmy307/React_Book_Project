@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 function RecommendationGenerator(){
 const [selectedMood, setSelectedMood] = useState("");
@@ -42,7 +43,9 @@ const handleMoodChange = (e) => {
             <button onClick={fetchBooksByMood}>Generate Random Book</button>
             {book && (
                 <div>
-                    <img src={book.bookImage} alt={book.bookTitle} />
+                    <Link to={`/book/${book.id}`}>
+                        <img src={book.bookImage} alt={book.bookTitle} />
+                    </Link>
                 </div>
             )}
         </div>
