@@ -17,7 +17,7 @@ function AddReviewForm({onReload}){
     useEffect(() => {
         const fetchData = async () =>{
             try{
-                const response = await axios.get(`http://localhost:5005/books/${booksId}`)
+                const response = await axios.get(`https://book-app-server-backend.adaptable.app/books/${booksId}`)
                 setBooks(response.data)
     
             }catch(err){
@@ -40,7 +40,7 @@ function AddReviewForm({onReload}){
        const updatedReview = [...books.reviews, newReview]
 
        axios
-            .patch(`http://localhost:5005/books/${booksId}`, { reviews: updatedReview })
+            .patch(`https://book-app-server-backend.adaptable.app/books/${booksId}`, { reviews: updatedReview })
             .then((response) =>{
                 console.log(response)
                 onReload();

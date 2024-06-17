@@ -11,7 +11,7 @@ function Genre(){
     useEffect(() => {
         const fetchData = async() =>{
             try{
-                const response = await axios.get(`http://localhost:5005/books?genre=${genre}`);
+                const response = await axios.get(`https://book-app-server-backend.adaptable.app/books?genre=${genre}`);
                 setBooks(response.data);
             }catch(err){
                 console.log("genre", err)

@@ -1,0 +1,25 @@
+
+.navbar{
+    background-color: #3d52a0;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 5px 20px;
+   
+}
+
+.navbarInfo{
+    display:flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+   
+}
+
+.navbarInfo a{
+    text-decoration: none;
+    color: white
+}

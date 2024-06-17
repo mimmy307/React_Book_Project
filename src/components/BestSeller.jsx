@@ -8,7 +8,7 @@ function BestSeller(){
     useEffect(() => {
         const fetchData = async ()=>{
             try{
-                const response = await axios.get("http://localhost:5005/books");
+                const response = await axios.get("https://book-app-server-backend.adaptable.app/books");
                 setBooks(response.data)
             }catch (error){
                 console.log("bestseller", error);

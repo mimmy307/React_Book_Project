@@ -10,7 +10,7 @@ function BookDetails({addToReadingList}){
 
     const fetchBookDetail = async () =>{
         try{
-            const response = await axios.get(`http://localhost:5005/books/${booksId}`)
+            const response = await axios.get(`https://book-app-server-backend.adaptable.app/books/${booksId}`)
             setOneBook(response.data)
         } catch(err){
             console.log("book details error", err)
