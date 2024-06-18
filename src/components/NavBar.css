@@ -23,3 +23,7 @@
     text-decoration: none;
     color: white
 }
+
+.navbar img{
+    width: 50px;
+}
