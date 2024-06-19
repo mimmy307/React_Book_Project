@@ -1,0 +1,61 @@
+.recommendation-generator {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 60%; /* Adjust width as per your design */
+    max-width: 600px; /* Example maximum width */
+    text-align: center; /* Center align text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.recommendation-generator h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.generator-controls {
+    display: flex;
+    justify-content: center; /* Center align child elements */
+    margin-bottom: 20px;
+}
+
+.generator-controls select {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.generator-controls button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3d52a0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.generator-controls button:hover {
+    background-color: #7091e6;
+}
+
+.book-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.book-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.book-container img:hover {
+    transform: scale(1.05);
+}

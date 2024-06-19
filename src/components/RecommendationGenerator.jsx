@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 import { Link } from "react-router-dom";
+import "../components/RecommendationsGenerator.css"
 
 function RecommendationGenerator(){
 const [selectedMood, setSelectedMood] = useState("");
@@ -23,8 +24,9 @@ const handleMoodChange = (e) => {
     setSelectedMood(e.target.value)
 }
  return(
-    <div>
+    <div className="recommendation-generator">
             <h2>Recommendation Generator</h2>
+            <div className="generator-controls">
             <select value={selectedMood} onChange={handleMoodChange}>
                 <option value="">Select Mood</option>
                 <option value="Happy">Happy</option>
@@ -41,8 +43,9 @@ const handleMoodChange = (e) => {
                 <option value="Motivated">Motivated</option>
             </select>
             <button onClick={fetchBooksByMood}>Generate Random Book</button>
+            </div>
             {book && (
-                <div>
+                <div className="book-container">
                     <Link to={`/book/${book.id}`}>
                         <img src={book.bookImage} alt={book.bookTitle} />
                     </Link>

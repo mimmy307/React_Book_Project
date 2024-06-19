@@ -13,8 +13,8 @@ function HomePage(){
                 <p>Slogan</p>
                 <p>short description</p>
             </div>
-            <BestSeller />
             <GenreCard />
+            <BestSeller />
             <RecommendationGenerator />
             
 
