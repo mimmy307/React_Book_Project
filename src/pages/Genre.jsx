@@ -2,6 +2,7 @@ import { useState, useEffect} from "react"
 import axios from "axios"
 import { useParams, Link } from "react-router-dom"
 import GenreSidebar from "../components/GenreSidebar"
+import "../pages/Genre.css"
 
 function Genre(){
     const [books, setBooks] = useState([])
@@ -22,20 +23,20 @@ function Genre(){
     },[genre])
  
     return(
-        <div>
-        <GenreSidebar />
-        <h2 style={{color:"red"}}>{genre}</h2>
-            {books.map((book) =>{
-                    return (
-                    <div key= {book.id}>
-                        <Link to={`/book/${book.id}`}>
-                        <img src={book.bookImage} alt={book.bookTitle}/>
-                        <p>{book.bookTitle}</p>
-                        </Link>
-                    </div>
-                    )
-                 })}
-
+        <div className="genre-container" > 
+            <GenreSidebar />
+            <div className="genre-content">
+            <h2>{genre}</h2>
+                {books.map((book) =>{
+                        return (
+                        <div key= {book.id}>
+                            <Link to={`/book/${book.id}`}>
+                            <img src={book.bookImage} alt={book.bookTitle}/>
+                            </Link>
+                        </div>
+                        )
+                    })}
+            </div>
         </div>
     )
 
