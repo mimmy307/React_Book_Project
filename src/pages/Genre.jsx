@@ -26,16 +26,19 @@ function Genre(){
         <div className="genre-container" > 
             <GenreSidebar />
             <div className="genre-content">
-            <h2>{genre}</h2>
-                {books.map((book) =>{
-                        return (
-                        <div key= {book.id}>
-                            <Link to={`/book/${book.id}`}>
-                            <img src={book.bookImage} alt={book.bookTitle}/>
-                            </Link>
-                        </div>
-                        )
-                    })}
+                <h2 >{genre}</h2>
+                <hr className="genre-divider" />
+                <div className="genre-content-grid">
+                    {books.map((book) =>{
+                            return (
+                            <div key= {book.id} className="genre-content-card">
+                                <Link to={`/book/${book.id}`}>
+                                <img src={book.bookImage} alt={book.bookTitle} className="genre-book-image"/>
+                                </Link>
+                            </div>
+                            )
+                        })}
+                </div>
             </div>
         </div>
     )

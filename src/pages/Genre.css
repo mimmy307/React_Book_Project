@@ -1,3 +1,42 @@
 .genre-container{
     display: flex;
 }
+
+.genre-content{
+    flex: 1;
+    padding: 20px;
+}
+
+.genre-content-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.genre-content-card{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.genre-book-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.genre-divider {
+    width: 100%; 
+    height: 2px; 
+    background-color: #ccc; 
+    border: none; 
+    margin: 10px auto; 
+  }
+
+.genre-content h2{
+    color: #3d52a0;
+    text-transform: uppercase;
+}
