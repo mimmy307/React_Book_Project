@@ -53,8 +53,8 @@ function AddReviewForm({onReload}){
     }
 
     return(
-        <div>
-            <form onSubmit={handleReviewSubmit}>
+        <div className="add-review-form-container">
+            <form className="add-review-form" onSubmit={handleReviewSubmit}>
                 <label>Full Name</label>
                 <input type="text" name="Full name"  value={fullname} onChange={handleFullname} />
 
