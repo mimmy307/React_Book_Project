@@ -64,7 +64,9 @@ function BookDetails({addToReadingList}){
             </div>
             <div className="book-details-action">
               <button onClick={HandleAddToReadingList}>Add to Reading List</button>
+              <a href={oneBook.amazonBookUrl} target= "_blank"><button>Buy</button></a>
             </div>
+
           </div>
           </div>
     

@@ -7,6 +7,8 @@ import Genre from './pages/Genre'
 import { useState } from 'react'
 import Profile from './pages/Profile'
 import AddBooksForm from './components/AddBooksForm'
+import AllBooks from './pages/AllBooks'
+import AboutUs from './pages/AboutUs'
 
 
 
@@ -38,6 +40,8 @@ const addBookToMyBooks = (book) =>{
     <Route path="/books/:genre" element={<Genre />} />
     <Route path="/profile" element={<Profile readingList={readingList} myBooks={myBooks} />} />
     <Route path="/newbook" element={<AddBooksForm addBookToMyBooks={addBookToMyBooks}/>} />
+    <Route path="/allbooks" element= {<AllBooks />} />
+    <Route path="/aboutus" element= {<AboutUs />} />
     </Routes>
     </div>
   )

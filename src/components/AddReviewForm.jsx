@@ -7,10 +7,12 @@ function AddReviewForm({onReload}){
     const [reviewText, setReviewText] = useState("");
 
     const handleFullname = (e) => setFullname(e.target.value);
-    const handeleReviewText = (e) => setReviewText(e.target.value);
+    const handleReviewText = (e) => setReviewText(e.target.value);
 
     const [books, setBooks] = useState([]);
     const {booksId} = useParams();
+
+        const [showForm, setShowForm] = useState(false); 
 
     
 
@@ -44,6 +46,7 @@ function AddReviewForm({onReload}){
             .then((response) =>{
                 console.log(response)
                 onReload();
+                setShowForm(false);
                 
             })
             .catch((err) =>{
@@ -52,22 +55,53 @@ function AddReviewForm({onReload}){
 
     }
 
-    return(
-        <div className="add-review-form-container">
-            <form className="add-review-form" onSubmit={handleReviewSubmit}>
-                <label>Full Name</label>
-                <input type="text" name="Full name"  value={fullname} onChange={handleFullname} />
+//     return(
+//         <div className="add-review-form-container">
+//             <form className="add-review-form" onSubmit={handleReviewSubmit}>
+//                 <label>Full Name</label>
+//                 <input type="text" name="Full name"  value={fullname} onChange={handleFullname} />
 
-                <label>Your Review</label>
-                <textarea name="review text" value={reviewText} onChange={handeleReviewText}/>
+//                 <label>Your Review</label>
+//                 <textarea name="review text" value={reviewText} onChange={handeleReviewText}/>
 
-                <button>Add review</button>
+//                 <button>Add review</button>
                
 
-            </form>
-        </div>
-    )
+//             </form>
+//         </div>
+//     )
 
+// }
+
+// export default AddReviewForm
+
+
+    return (
+        <div className="add-review-form-container">
+            {/* Button to toggle form visibility */}
+            {!showForm && (
+                <button className="add-review-button" onClick={() => setShowForm(true)}>
+                    Add Review
+                </button>
+            )}
+
+            {/* Form displayed when showForm is true */}
+            {showForm && (
+                <form className="add-review-form" onSubmit={handleReviewSubmit}>
+                    <label>Full Name</label>
+                    <input type="text" name="Full name" value={fullname} onChange={handleFullname} />
+
+                    <label>Your Review</label>
+                    <textarea name="review text" value={reviewText} onChange={handleReviewText} />
+
+                    <div className="form-buttons">
+                        <button type="submit">Add review</button>
+                        <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
+                    </div>
+                </form>
+            )}
+        </div>
+    );
 }
 
-export default AddReviewForm
+export default AddReviewForm;

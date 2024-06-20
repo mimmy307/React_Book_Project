@@ -62,7 +62,7 @@ function GenreSidebar(){
             {genres.map((genre)=>{
                 return(
                 <div key= {genre.title} className="genre-link">
-                    <NavLink to={`/books/${genre.alt}`} activeClassName="active">
+                    <NavLink to={`/books/${genre.alt}`} className= {({isActive})  => isActive ? "genre-link genre-active" : "genre-link"}>
                         <p>{genre.title}</p>
                     </NavLink>
                 </div>

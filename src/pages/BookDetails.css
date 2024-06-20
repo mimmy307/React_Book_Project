@@ -1,4 +1,4 @@
-.book-details-container {
+/* .book-details-container {
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -17,6 +17,7 @@
 
   .book-details-content {
     margin-left: 20px;
+    width: 60%;
   }
   
   .book-image-container{
@@ -83,10 +84,7 @@
     }
   }
   
-  /* .book-details-tags button:last-child {
-    margin-right: 0;
-  } */
-  
+
   
   .book-details-action {
     margin-top: 20px;
@@ -94,6 +92,8 @@
   
   .book-details-action button {
     padding: 10px 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     background-color: #28a745;
     color: #fff;
@@ -105,10 +105,6 @@
     }
   }
   
-  
-  .book-reviews-container {
-    /* width: 400px; */
-  }
   
   .book-reviews-title {
     font-size: 20px;
@@ -164,4 +160,208 @@
     }
   }
   
- 
+  */
+
+  .book-details-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #adb7da;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.book-details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.book-image-container {
+    width: 300px;
+    height: 450px;
+}
+
+.book-details-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-details-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #3d52a0;
+}
+
+.book-details-author {
+    font-size: 18px;
+    color: #8697c4;
+    font-weight: bold;
+}
+
+.book-details-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rating-stars {
+    margin-left: 10px;
+}
+
+.star {
+    color: gold;
+    font-size: 20px;
+}
+
+.book-details-description {
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #3d52a0;
+}
+
+.book-details-tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.book-details-tags button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: #7091e6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-details-tags button:hover {
+    background-color: #8697c4;
+}
+
+.book-details-action {
+    margin-top: 20px;
+}
+
+.book-details-action button, .book-details-action a button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #3d52a0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-details-action button:hover, .book-details-action a button:hover {
+    background-color: #7091e6;
+}
+
+.book-reviews-container {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.book-reviews-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #3d52a0;
+}
+
+.book-review {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #99aedc, #cdd7f1);
+    color: #3d52a0;
+}
+
+.book-review-fullname {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.book-review-text {
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+.add-review-form-container {
+    margin-top: 20px;
+}
+
+.add-review-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3d52a0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-review-button:hover {
+    background-color: #7091e6;
+}
+
+.add-review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.add-review-form label {
+    font-weight: bold;
+    color: #3d52a0;
+}
+
+.add-review-form input,
+.add-review-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #8697c4;
+    border-radius: 5px;
+    background-color: #ede8f5;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3d52a0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-buttons button:hover {
+    background-color: #7091e6;
+}

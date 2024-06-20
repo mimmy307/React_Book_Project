@@ -25,7 +25,7 @@
    
 }
 
-.active {
+.genre-active {
     width: 90px;
     height: 60px;
     border-radius: 10px;
@@ -36,7 +36,7 @@
    
   }
 
-  .active p{
+  .genre-active p{
     color: #3d52a0;
   }
 
