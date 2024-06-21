@@ -45,7 +45,7 @@ const handleMoodChange = (e) => {
             <button onClick={fetchBooksByMood}>Generate Random Book</button>
             </div>
             {book && (
-                <div className="book-container">
+                <div className="recommendation-book-container">
                     <Link to={`/book/${book.id}`}>
                         <img src={book.bookImage} alt={book.bookTitle} />
                     </Link>

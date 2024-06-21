@@ -3,10 +3,11 @@
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    width: 60%; /* Adjust width as per your design */
-    max-width: 600px; /* Example maximum width */
-    text-align: center; /* Center align text */
+    width: 90%; 
+    /* max-width: 600px;  */
+    text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background:linear-gradient(#a6b9e3d2,#cbd4e77e )
 }
 
 .recommendation-generator h2 {
@@ -16,7 +17,7 @@
 
 .generator-controls {
     display: flex;
-    justify-content: center; /* Center align child elements */
+    justify-content: center; 
     margin-bottom: 20px;
 }
 
@@ -43,15 +44,15 @@
     background-color: #7091e6;
 }
 
-.book-container {
+.recommendation-book-container {
     margin-top: 20px;
     text-align: center;
 }
 
-.book-container img {
+.recommendation-book-container img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
 }

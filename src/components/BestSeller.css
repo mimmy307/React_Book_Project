@@ -1,4 +1,4 @@
-.slider-container{
+/* .slider-container{
     margin: 20px;
     border: 1px solid black;
     border-radius: 30px;
@@ -30,4 +30,54 @@
 
 .slick-next {
     right: 10px;
+} */
+
+.slider-container {
+    margin: 20px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background:linear-gradient(#a6b9e3d2,#cbd4e77e )
+  }
+  
+  .slider-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 20px;
+    color:#263d98
+  }
+  
+  .slick-prev,
+  .slick-next {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    cursor: pointer;
+
+  }
+
+  
+  .slick-prev:before,
+  .slick-next:before {
+  color: #3D52A2
 }
+  
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+    margin-right: -20px;
+  }
+  
+  .book-image {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  
+  

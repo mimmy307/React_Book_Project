@@ -1,0 +1,86 @@
+.about-us-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #dee5f8, #efeef3) ;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .about-us-container h2 {
+    color: #3d52a0;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .about-us-container p {
+    color: #555555;
+    line-height: 1.6;
+  }
+  
+  .feature-section {
+    margin-top: 30px;
+  }
+  
+  .feature-section h3 {
+    color: #7091e6;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .feature-section ul {
+    list-style-type: disc;
+    color: #555555;
+    margin-left: 20px;
+  }
+  
+  .feature-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .developer-section {
+    margin-top: 30px;
+  }
+  
+  .developer-section h3 {
+    color: #7091e6;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .connect {
+    margin-top: 15px;
+  }
+  
+  .connect p {
+    color: #555555;
+    font-weight: bold;
+  }
+  
+  .connect ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 5px;
+  }
+  
+  .connect ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .connect ul li a {
+    color: #3d52a0;
+    text-decoration: none;
+  }
+  
+  .connect ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer {
+    margin-top: 30px;
+    color: #555555;
+    font-style: italic;
+  }
+  

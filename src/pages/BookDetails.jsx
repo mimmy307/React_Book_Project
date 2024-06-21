@@ -42,17 +42,28 @@ function BookDetails({addToReadingList}){
         return stars;
       };
 
+    const deleteBook = () =>{
+      axios
+        .delete(`https://book-app-server-backend.adaptable.app/books/${booksId}`)
+        .then (() =>{
+          navigate ('/')
+        })
+        .catch((err) => console.log("delete book error", err))
+
+    };
+
     return (
       <div className="book-details-container">
-      <div className="back-btn-container">
-            <button className="back-button" 
-              onClick={() => {
+        <div className="back-btn-container">
+          <button className="back-button" 
+             onClick={() => {
                 navigate(-1);
               }}
               >
               back
-            </button>
-          </div>
+          </button>
+          <button className="delete-book-btn" onClick={deleteBook}>Delete book</button>
+        </div>
         <div className="book-details">
           <div className="book-image-container">
             <img
@@ -79,6 +90,7 @@ function BookDetails({addToReadingList}){
               <button onClick={HandleAddToReadingList}>{isAdded ? "Added to Reading List" : "Add to Reading List"}</button>
               <a href={oneBook.amazonBookUrl} target= "_blank"><button>Buy</button></a>
             </div>
+            
             
           </div>
         </div>

@@ -24,15 +24,15 @@ function BestSeller(){
         fetchData();
     }, [])
 
-    const settings ={
+    const settings = {
         dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 5,
-        slidesToScroll: 5,
-        prevArrow: <div className="slick-prev" />, 
-        nextArrow: <div className="slick-next" />
-    }
+        slidesToScroll: 1,
+        prevArrow: <div className="slick-prev" />,
+        nextArrow: <div className="slick-next" />,
+      };
 
     return(
         <div className="slider-container">
