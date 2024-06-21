@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "../components/AddBooksForm.css"
 
 
 function AddBooksForm({addBookToMyBooks}){
@@ -54,8 +55,8 @@ function handleFormSubmit (e){
 }
 
 return(
-    <div>
-        <form onSubmit={handleFormSubmit}>
+    <div className="add-book-form-container">
+        <form className="add-book-form" onSubmit={handleFormSubmit}>
             <label>Book Title</label>
             <input
                 type="text" 
@@ -135,6 +136,8 @@ return(
                 name = "rating"
                 value={rating}
                 onChange={handleRating}
+                min="1"
+                max="5"
             />
 
             <button type="submit">Add Book</button>

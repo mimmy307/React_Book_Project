@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import AddReviewForm from "../components/AddReviewForm";
 import "../pages/BookDetails.css"
+import { useNavigate } from "react-router-dom";
 
 function BookDetails({addToReadingList}){
     const {booksId} = useParams();
     const [oneBook, setOneBook] = useState({})
+    const [isAdded, setIsAdded] = useState(false)
+    const navigate = useNavigate()
     
 
     const fetchBookDetail = async () =>{
@@ -24,6 +27,7 @@ function BookDetails({addToReadingList}){
 
     const HandleAddToReadingList = () =>{
        addToReadingList(oneBook)
+       setIsAdded(true)
     }
     
     const ratingStars = (rating) => {
@@ -39,49 +43,58 @@ function BookDetails({addToReadingList}){
       };
 
     return (
-        <div className="book-details-container">
+      <div className="book-details-container">
+      <div className="back-btn-container">
+            <button className="back-button" 
+              onClick={() => {
+                navigate(-1);
+              }}
+              >
+              back
+            </button>
+          </div>
         <div className="book-details">
-        <div className="book-image-container">
-          <img
-            src={oneBook.bookImage}
-            alt={oneBook.bookTitle}
-            className="book-details-image"
-          />
+          <div className="book-image-container">
+            <img
+              src={oneBook.bookImage}
+              alt={oneBook.bookTitle}
+              className="book-details-image"
+            />
           </div>
           <div className="book-details-content">
             <h2 className="book-details-title">{oneBook.bookTitle}</h2>
             <p className="book-details-author">{oneBook.bookAuthor}</p>
             <div className="book-details-rating">
-            <p>Rating:</p>
-            <div className="rating-stars">
-              {ratingStars(oneBook.rating)}
+              <p>Rating:</p>
+              <div className="rating-stars">
+                {ratingStars(oneBook.rating)}
+              </div>
             </div>
-          </div>
             <p className="book-details-description">{oneBook.bookDescription}</p>
             <div className="book-details-tags">
-              <button>{oneBook.genre}</button>
-              <button>{oneBook.mood}</button>
+                <button>{oneBook.genre}</button>
+                <button>{oneBook.mood}</button>
             </div>
             <div className="book-details-action">
-              <button onClick={HandleAddToReadingList}>Add to Reading List</button>
+              <button onClick={HandleAddToReadingList}>{isAdded ? "Added to Reading List" : "Add to Reading List"}</button>
               <a href={oneBook.amazonBookUrl} target= "_blank"><button>Buy</button></a>
             </div>
-
-          </div>
-          </div>
-    
-          <div className="book-reviews-container">
-            <h2 className="book-reviews-title">Book Reviews</h2>
-            {oneBook.reviews &&
-              oneBook.reviews.map((review, index) => (
-                <div key={index} className="book-review">
-                  <p className="book-review-fullname">{review.fullname}</p>
-                  <p className="book-review-text">{review.text}</p>
-                </div>
-              ))}
-            <AddReviewForm onReload={fetchBookDetail} />
+            
           </div>
         </div>
+    
+        <div className="book-reviews-container">
+          <h2 className="book-reviews-title">Book Reviews</h2>
+            {oneBook.reviews &&
+            oneBook.reviews.map((review, index) => (
+              <div key={index} className="book-review">
+                 <p className="book-review-fullname">{review.fullname}</p>
+                <p className="book-review-text">{review.text}</p>
+              </div>
+              ))}
+          <AddReviewForm onReload={fetchBookDetail} />
+        </div>
+      </div>
       );
     
     // return(

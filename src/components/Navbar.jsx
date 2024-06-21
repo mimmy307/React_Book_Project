@@ -12,7 +12,7 @@ function Navbar(){
             <NavLink className={({isActive})  => isActive ? "navbarInfo nav-active" : "navbarInfo"} to="/allbooks"><p>Books</p></NavLink>
             <NavLink className={({isActive})  => isActive ? "navbarInfo nav-active" : "navbarInfo"} to="/aboutus"><p>About Us</p></NavLink>
         </div>
-        <Link className="profile-icon"  to="/profile"><img src={profileIcon}/></Link> 
+        <Link className="profile-icon"  to="/profile/mydetails"><img src={profileIcon}/></Link> 
 
         </div>
     )

@@ -1,0 +1,92 @@
+/* ProfileDetails.css */
+
+.profile-details-container {
+    width: 900px;
+    height: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #dee5f8, #efeef3)  ;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3d52a0; 
+    margin-right: 20px;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info h2 {
+    color: #3d52a0; 
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .profile-info p {
+    color: #707070; 
+    margin-bottom: 5px;
+  }
+  
+  .bio-section {
+    margin-bottom: 20px;
+  }
+  
+  .bio-section h3 {
+    color: #3d52a0; 
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .bio-section p {
+    color: #707070; 
+    line-height: 1.6;
+  }
+  
+  .details-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .favorite-genres,
+  .interests,
+  .reading-goals {
+    padding: 10px;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .favorite-genres h3,
+  .interests h3,
+  .reading-goals h3 {
+    color: #3d52a0; 
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .favorite-genres ul,
+  .interests p,
+  .reading-goals p {
+    color: #707070; 
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+
+  

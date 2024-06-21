@@ -12,7 +12,7 @@ function AddReviewForm({onReload}){
     const [books, setBooks] = useState([]);
     const {booksId} = useParams();
 
-        const [showForm, setShowForm] = useState(false); 
+    const [showForm, setShowForm] = useState(false); 
 
     
 
@@ -78,14 +78,12 @@ function AddReviewForm({onReload}){
 
     return (
         <div className="add-review-form-container">
-            {/* Button to toggle form visibility */}
             {!showForm && (
                 <button className="add-review-button" onClick={() => setShowForm(true)}>
                     Add Review
                 </button>
             )}
 
-            {/* Form displayed when showForm is true */}
             {showForm && (
                 <form className="add-review-form" onSubmit={handleReviewSubmit}>
                     <label>Full Name</label>

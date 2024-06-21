@@ -173,6 +173,7 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background-color: white;
+    position: relative;
 }
 
 .book-details {
@@ -249,12 +250,6 @@
     background-color: #7091e6;
     color: #fff;
     border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.book-details-tags button:hover {
-    background-color: #8697c4;
 }
 
 .book-details-action {
@@ -364,4 +359,24 @@
 
 .form-buttons button:hover {
     background-color: #7091e6;
+}
+
+.back-button{
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #9ea9c7;
+    color: #1e3584;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover{
+        background-color: #acb6d5 ;
+    }
+}
+
+.back-btn-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
