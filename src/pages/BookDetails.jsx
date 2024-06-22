@@ -109,40 +109,6 @@ function BookDetails({addToReadingList}){
       </div>
       );
     
-    // return(
-    //     <div>
-    //         <div>
-    //             <img src={oneBook.bookImage} alt={oneBook.bookTitle} />
-    //             <div>
-    //                 <h2>{oneBook.bookTitle}</h2>
-    //                 <p>{oneBook.bookAuthor}</p>
-    //                 <p>Rating:{oneBook.rating}</p>
-    //                 <p>{oneBook.bookDescription}</p>
-    //                 <span>
-    //                     <button>{oneBook.genre}</button>
-    //                     <button>{oneBook.mood}</button>
-    //                 </span>
-    //                 <div>
-    //                     <button onClick={HandleAddToReadingList}>Add to reading list</button>
-    //                 {/* buy book */}
-    //                 </div>
-    //             </div>
-    //         </div>
-
-    //         <div>
-    //             <h2>Book Reviews</h2>
-    //             {oneBook.reviews && (oneBook.reviews.map((review, index) => (
-    //                 <div key={index}>
-    //                     <p>{review.fullname}</p>
-    //                     <p>{review.text}</p>
-    //                 </div>
-    //             )))}
-
-    //             <AddReviewForm  onReload={fetchBookDetail}/>
-            
-    //         </div>
-    //     </div>
-    // )
 }
 
 export default BookDetails

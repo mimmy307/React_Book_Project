@@ -55,26 +55,6 @@ function AddReviewForm({onReload}){
 
     }
 
-//     return(
-//         <div className="add-review-form-container">
-//             <form className="add-review-form" onSubmit={handleReviewSubmit}>
-//                 <label>Full Name</label>
-//                 <input type="text" name="Full name"  value={fullname} onChange={handleFullname} />
-
-//                 <label>Your Review</label>
-//                 <textarea name="review text" value={reviewText} onChange={handeleReviewText}/>
-
-//                 <button>Add review</button>
-               
-
-//             </form>
-//         </div>
-//     )
-
-// }
-
-// export default AddReviewForm
-
 
     return (
         <div className="add-review-form-container">

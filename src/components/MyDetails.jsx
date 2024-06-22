@@ -7,7 +7,7 @@ function MyDetails() {
     lastName: "Doe",
     email: "john.doe@example.com",
     phoneNumber: "+1 234 567 890",
-    profilePicture: "https://api.multiavatar.com/kathrin.svg", // Placeholder image URL
+    profilePicture: "https://api.multiavatar.com/kathrin.svg", 
     favoriteGenres: ["Fiction", "Mystery", "Science-Fiction"],
     interests: ["Traveling", "Cooking", "Photography"],
     location: "New York, NY, USA",
