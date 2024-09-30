@@ -19,7 +19,7 @@ function AddReviewForm({onReload}){
     useEffect(() => {
         const fetchData = async () =>{
             try{
-                const response = await axios.get(`https://book-app-server-backend.adaptable.app/books/${booksId}`)
+                const response = await axios.get(`https://bookscapes-back-end.onrender.com/books/${booksId}`)
                 setBooks(response.data)
     
             }catch(err){
@@ -42,7 +42,7 @@ function AddReviewForm({onReload}){
        const updatedReview = [...books.reviews, newReview]
 
        axios
-            .patch(`https://book-app-server-backend.adaptable.app/books/${booksId}`, { reviews: updatedReview })
+            .patch(`https://bookscapes-back-end.onrender.com/books/${booksId}`, { reviews: updatedReview })
             .then((response) =>{
                 console.log(response)
                 onReload();

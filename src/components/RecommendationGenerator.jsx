@@ -9,7 +9,7 @@ const [book, setBook] = useState(null);
 
 const fetchBooksByMood = async () => {
     try{ 
-        const response = await axios.get (`https://book-app-server-backend.adaptable.app/books?mood=${selectedMood}`);
+        const response = await axios.get (`https://bookscapes-back-end.onrender.com/books?mood=${selectedMood}`);
         const books = response.data;
         const randomIndex = Math.floor(Math.random() * books.length);
         const randomBook = books[randomIndex];

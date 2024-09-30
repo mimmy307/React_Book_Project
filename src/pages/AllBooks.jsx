@@ -11,7 +11,7 @@ function AllBooks(){
     useEffect(() => {
         const fetchData = async ()=>{
             try{
-                const response = await axios.get("https://book-app-server-backend.adaptable.app/books");
+                const response = await axios.get("https://bookscapes-back-end.onrender.com/books");
                 setBooks(response.data)
             }catch (error){
                 console.log(error);
@@ -24,7 +24,7 @@ function AllBooks(){
     useEffect(() => {
         const searchedBook = async() =>{
             try{
-                const response = await axios.get(`https://book-app-server-backend.adaptable.app/books?q=${query}`)
+                const response = await axios.get(`https://bookscapes-back-end.onrender.com/books?q=${query}`)
                 setBooks(response.data)
             } catch (err) {
                 console.log(err)

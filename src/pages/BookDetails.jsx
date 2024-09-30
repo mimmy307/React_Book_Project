@@ -14,7 +14,7 @@ function BookDetails({addToReadingList}){
 
     const fetchBookDetail = async () =>{
         try{
-            const response = await axios.get(`https://book-app-server-backend.adaptable.app/books/${booksId}`)
+            const response = await axios.get(`https://bookscapes-back-end.onrender.com/books/${booksId}`)
             setOneBook(response.data)
         } catch(err){
             console.log("book details error", err)
@@ -44,7 +44,7 @@ function BookDetails({addToReadingList}){
 
     const deleteBook = () =>{
       axios
-        .delete(`https://book-app-server-backend.adaptable.app/books/${booksId}`)
+        .delete(`https://bookscapes-back-end.onrender.com/books/${booksId}`)
         .then (() =>{
           navigate ('/')
         })
