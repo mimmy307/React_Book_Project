@@ -32,6 +32,23 @@ function BestSeller(){
         slidesToScroll: 1,
         prevArrow: <div className="slick-prev" />,
         nextArrow: <div className="slick-next" />,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3, 
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 760, 
+                settings: {
+                    slidesToShow: 1, 
+                    slidesToScroll: 1,
+                },
+            },
+
+        ]
       };
 
     return(

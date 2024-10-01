@@ -6,8 +6,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding:  0 20px
+    padding:  0 20px;
+    position: relative;
+    z-index: 100;
    
 }
 
@@ -26,7 +27,6 @@
     display: flex;
     align-items:center ;
     justify-content: center;
-    align-content: center;
     text-align: center;
 
     &:hover{
@@ -53,11 +53,11 @@
     color: white;
 }
 
-.navbar img{
+.logo{
     width: 50px;
 }
 
-.profile-icon{
+.profile-icon-desktop{
     width: 50px;
     height: 50px;
     background-color: #ede8f5;
@@ -68,7 +68,71 @@
 
 }
 
-.profile-icon img{
+.profile-icon-desktop img{
     width: 50%;
 }
 
+.menu-icon{
+    display: none;
+    background: none;
+    border: none;
+}
+
+.profile-icon-mobile{
+    display: none;
+}
+
+@media (max-width: 760px){
+    .navbar{
+        justify-content: space-between;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    .menu-icon img{
+        width: 30px;
+    }
+
+    .profile-icon-desktop{
+        display: none;
+    }
+
+    .profile-icon-mobile{
+        display: flex;
+        width: 50px;
+        height: 50px;
+        background-color: #ede8f5;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        margin-top: 10px;
+    }
+
+    .profile-icon-mobile img{
+        width: 50%;
+    }
+
+    .navbarInfo{
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #3d52a0;
+        padding: 10px;
+        border-radius: 10px;
+        width: max-content;
+    }
+
+    .navbarInfo.active {
+        display: flex;
+    }
+
+    .navbarInfo a {
+        text-decoration: none;
+        color: white;
+    }
+}

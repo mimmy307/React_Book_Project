@@ -47,4 +47,14 @@
     margin-bottom: 10px;
   }
   
-  
+  @media (max-width: 760px) {
+
+    .slider-container {
+      margin: 10px;
+
+    }
+    .book-image {
+        width: 150px; 
+        height: 225px;
+    }
+}
