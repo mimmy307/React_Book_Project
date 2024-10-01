@@ -9,6 +9,7 @@
     gap: 15px;
     margin: 5px;
     border-radius: 10px;
+    position: relative;
 }
 
 .genre-link{
@@ -44,3 +45,4 @@
     text-decoration: none;
     color: white
 }
+

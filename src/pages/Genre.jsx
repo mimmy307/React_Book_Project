@@ -7,13 +7,20 @@ import "../pages/Genre.css"
 function Genre(){
     const [books, setBooks] = useState([])
     const {genre} = useParams()
+    const [sidebarVisible, setSidebarVisible] = useState(true)
 
+    const isMobile = () => window.innerWidth <= 768;
 
     useEffect(() => {
         const fetchData = async() =>{
             try{
                 const response = await axios.get(`https://bookscapes-back-end.onrender.com/books?genre=${genre}`);
                 setBooks(response.data);
+                if (isMobile()) {
+                    setSidebarVisible(false); 
+                } else {
+                    setSidebarVisible(true); 
+                }
             }catch(err){
                 console.log("genre", err)
             }
@@ -21,11 +28,18 @@ function Genre(){
 
         fetchData();
     },[genre])
+
+    const toggleSidebar = () => {
+        setSidebarVisible(!sidebarVisible);
+    };
  
     return(
         <div className="genre-container" > 
-            <GenreSidebar />
+            { sidebarVisible && <GenreSidebar />}
             <div className="genre-content">
+                <button className="toggle-sidebar" onClick={toggleSidebar}>
+                    {sidebarVisible ? "Hide Genres" : "Show Genres"}
+                </button>
                 <h2 >{genre}</h2>
                 <hr className="genre-divider" />
                 <div className="genre-content-grid">

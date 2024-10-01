@@ -40,3 +40,24 @@
     color: #3d52a0;
     text-transform: uppercase;
 }
+
+.toggle-sidebar{
+    display: none;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #3d52a0;
+    color: white;
+    border: none;
+    border-radius: 5px; 
+}
+
+@media (max-width: 768px) {
+    .toggle-sidebar {
+        display: block;
+    }
+
+    .genre-content-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
