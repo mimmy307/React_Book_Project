@@ -9,6 +9,7 @@
     gap: 15px;
     margin: 5px;
     border-radius: 10px;
+    display: flex;
 }
 
 .profile-sidebar-main h3{
@@ -54,4 +55,52 @@
 
 .profile-link a{
     text-decoration: none;
+}
+
+.profile-menu {
+    display: none;
+    background-color: #3d52a0;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+@media (max-width: 760px) {
+
+    .profile-container {
+        flex-direction: column;
+    }
+
+    .profile-sidebar-main {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 5px;
+        z-index: 999;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
+        align-items: center; 
+        justify-content: center;
+    }
+    
+    .profile-sidebar-main.visible {
+        display: flex; 
+    }
+
+    .profile-sidebar-main h3{
+        display: none;
+    }
+
+    .profile-link {
+        width: 60%;
+    }
+
+    .profile-menu {
+        display: block;
+    }
 }

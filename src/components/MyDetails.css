@@ -1,8 +1,8 @@
 
 
 .profile-details-container {
-    width: 900px;
-    height: 600px;
+    width: 80%;
+    height: 100vh;
     margin: 20px auto;
     padding: 20px;
     background: linear-gradient(135deg, #dee5f8, #efeef3)  ;
@@ -89,4 +89,17 @@
   }
   
 
-  
+  @media (max-width: 760px){
+
+    .profile-details-container {
+      width: 80%;
+      height: 100%;
+    }
+
+    .details-section {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+  }

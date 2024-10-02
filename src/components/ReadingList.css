@@ -46,3 +46,12 @@
     background-color: #7091e5;
     color: white;
   }
+
+  @media (max-width: 760px){
+    .reading-list-container {
+      width:80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+  }
